@@ -2,13 +2,11 @@ import dotenv from "dotenv";
 dotenv.config();
 import mysql12 from "mysql2";
 
-const PASSWORD = process.env.PASSWORD;
-
 const pool = mysql12.createPool({
-  host: "localhost",
-  user: "root",
-  password: PASSWORD,
-  database: "school_management",
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE_NAME,
 });
 
 const promisePool = pool.promise();
