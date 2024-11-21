@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
-import db from "./config/db.js";
 import schoolRouter from "./routes/school.route.js";
 
 const PORT = process.env.PORT || 8000;
